@@ -85,6 +85,20 @@
                 border-radius: 5px;
                 padding: 8px 25px;
             }
+            .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: gray;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
         </style>
     </head>
 
@@ -94,10 +108,23 @@
 
             <h1 class="heading">Ticket booking service</h1>
             <br><br>
-            <div>
-                <button class="button">Concerts</button>
-                <button class="button">Plays</button>
-            </div>
+            <div class="grid-container">
+                <div>
+                  <a href="bottom1.htm">
+                    <b>
+                    <img src="fire.jpg" width="50" height="60" alt="fire"/>
+                    CONCERT
+                    <b>           
+                    </a>
+                </div>
+                <div>
+                  <a href="bottom2.htm">
+                  </b>
+                  <img src="fire.jpg" width="50" height="60" alt="fire"/>
+                  PLAY</a>
+                  </b>
+                </div>
+              </div>
 
             <div class="box-container">
                 
