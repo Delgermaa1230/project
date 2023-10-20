@@ -38,7 +38,12 @@
                 background-attachment: fixed;
                 background-size: cover;
             }
-            .button{
+            .buttons-category{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .buttons-category .button{
                 color: rgb(91, 77, 47);
                 padding: 12px 16px;
                 font-size: 16px;
@@ -55,10 +60,23 @@
                 
             }
 
+            .buttons-category .arrow {
+                cursor: pointer;
+            }
+            .buttons-category .arrow .right-arrow:hover, .left-arrow:hover {
+                color: rgb(52, 131, 131);
+            }
             .container .box-container{
                 display:grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(9, minmax(300px, 1fr));
+                overflow: hidden;
                 gap: 15px
+            }
+
+            .container .arrow {
+                width: 80px;
+                display: flex;
+                justify-content: space-between;
             }
 
             .container .box-container .box{
@@ -123,16 +141,28 @@
                 <b>YOUR CART<b></a>
             <h1 class="heading">TICKET BOOKING SERVICE</h1>
             <br><br>
-            <div>
-                <button class="button">
-                <img src="i/concert.png" width="25" height="25" alt="concert icon"> 
-                <b>CONCERTS</button>
-                <button class="button">
-                <img src="i/theatre.png" width="25" height="25" alt="play icon">
-                <b>PLAYS</b></button>
-                <button class="button">
-                <img src="i/CD.png" width="25" height="25" alt="cd">
-                <b>CD</b></button>
+            <div class="buttons-category">
+                <div class="category">
+                    <button class="button">
+                    <img src="i/concert.png" width="25" height="25" alt="concert icon"> 
+                    <b>CONCERTS</button>
+                    <button class="button">
+                    <img src="i/theatre.png" width="25" height="25" alt="play icon">
+                    <b>PLAYS</b></button>
+                    <button class="button">
+                    <img src="i/CD.png" width="25" height="25" alt="cd">
+                    <b>CD</b></button>
+                </div>
+                
+                <!-- arrows -->
+                <div class="arrow">
+                    <!-- left arrow -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="left-arrow" id="left-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" /></svg>
+                    <!-- right arrow -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="right-arrow" id="right-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+                </div>
                 
             </div>
             <div class="black"></div>
@@ -655,5 +685,6 @@
         </div>
 
         <script src="main.js"></script>
+        <script src="slider.js"></script>
     </body>
 </html>
