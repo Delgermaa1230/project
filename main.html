@@ -70,6 +70,7 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
+                cursor: pointer;
             }
 
             .container .box-container .box img{
@@ -156,10 +157,8 @@
                     </p>
                     <a href="#" class="btn">захиалах</a>
                 </div>
-            
-               
 
-                <div class="box">
+                <div class="box" onclick="slideInTheRed()">
                     <h3>THE RED</h3>
                     <img src="i/taylor with mirror.png" alt="taylor with mirror">
                     <p>
@@ -179,7 +178,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box" onclick="slideInSpeakNow()">
                     <h3>SPEAK NOW</h3>
                     <img src="i/birds.png" alt="taylor's photo 3">
                     <p>
@@ -200,7 +199,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box" onclick="slideIn1989()">
                     <h3>THE 1989</h3>
                     <img src="i/Taylor born in 1989.png" alt="1989 photo">
                     <p>
@@ -221,7 +220,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box" onclick="slideInTheReputation()">
                     <h3>THE REPUTATION</h3>
                     <img src="i/Taylor in black sweater.png" alt="taylor in black sweater">
                     <p>
@@ -243,7 +242,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box" onclick="slideInTheEras()">
                     <h3>THE ERAS</h3>
                     <img src="i/sky and Taylor.png" alt="sky and taylor">
                     <p>
@@ -262,7 +261,8 @@
                     </p>
                     <a href="#" class="btn">захиалах</a>
                 </div>
-                <div class="box">
+
+                <div class="box" onclick="slideInFearlessPlay()">
                     <h3>FEARLESS</h3>
                     <img src="i/plays1.png" alt="plays1">
                     <p>
@@ -282,7 +282,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>              
 
-                <div class="box">
+                <div class="box" onclick="slideInTheRedPlay()">
                     <h3>THE RED</h3>
                     <img src="i/plays2.png" alt="plays2">
                     <p>
@@ -302,7 +302,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box" onclick="slideInSpeakNowPlay()">
                     <h3>SPEAK NOW</h3>
                     <img src="i/plays3.png" alt="plays3">
                     <p>
@@ -322,70 +322,6 @@
                     </p>
                     <a href="#" class="btn">захиалах</a>
                 </div>
-            <!-- 
-                <div class="box">
-                    <h3>THE 1989</h3>
-                    <img src="i/plays4.png" alt="plays4">
-                    <p>
-                        <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
-
-                                <dd>
-                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
-                                    2023.12.03
-                                </dd>
-
-                                <dd>
-                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
-                                    Miami,Fl
-                                </dd>
-
-                        </dl>
-                    </p>
-                    <a href="1989.html" class="btn">захиалах</a>
-                </div>
-
-                <div class="box">
-                    <h3>THE REPUTATION</h3>
-                    <img src="i/plays5.png" alt="plays5">
-                    <p>
-                        <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
-
-                                <dd>
-                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
-                                    2024.04.21
-                                </dd>
-
-
-                                <dd>
-                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
-                                    Miami,Fl
-                                </dd>
-
-                        </dl>
-                    </p>
-                    <a href="thereputation.html" class="btn">захиалах</a>
-                </div>
-
-                <div class="box">
-                    <h3>THE ERAS</h3>
-                    <img src="i/plays6.png" alt="plays6">
-                    <p>
-                        <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
-                                <dd>
-                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
-                                    2023.06.02
-                                </dd>
-
-                                <dd>
-                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
-                                    Miami,Fl
-                                </dd>
-
-                        </dl>
-                    </p>
-                    <a href="theeras.html" class="btn">захиалах</a>
-                </div>
-            -->
             </div>
 
             <!-- description section starts -->
@@ -423,6 +359,294 @@
                         <div class="guest-box">
                             <img src="guest-img/fearless-gloriana.jpg" alt="gloriana">
                             <p>Gloriana Music Band</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Red -->
+            <section class="desc-container" id="theRed">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theRed/theRed-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheRed()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">129$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Date</span> : 2023.11.13</h2>
+                        <h2><span>From</span> : 19:00 - 24:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theRed/edsheeran.jpg" alt="sheeran">
+                            <p>Ed Sheeran</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theRed/falloutboy.jpg" alt="fallout">
+                            <p>Fall Out Boy</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theRed/jenniferlopez.jpg" alt="jennifer">
+                            <p>Jennifer Lopez</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Speak Now -->
+            <section class="desc-container" id="speakNow">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/speakNow/speakNow-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInSpeakNow()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">50$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2024.04.21</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNow/hayley-jpg.jpeg" alt="hayley">
+                            <p>Hayley Williams</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNow/falloutboy.jpg" alt="kellie">
+                            <p>Fall Out Boy</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 1989 -->
+            <section class="desc-container" id="1989">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/1989/1989bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideIn1989()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">67$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.12.03</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/1989/ryanadams.jpg" alt="hayley">
+                            <p>Ryan Adams</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/1989/shawnmendes.jpg" alt="kellie">
+                            <p>Shawn Mendes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Reputation -->
+            <section class="desc-container" id="theReputation">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theReputation/reputation-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheReputation()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">69$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.04.21</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theReputation/selenagomez.jpg" alt="selena">
+                            <p>Selena Gomez</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theReputation/shawnmendes.jpg" alt="kellie">
+                            <p>Shawn Mendes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Eras -->
+            <section class="desc-container" id="theEras">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theEras/ErasTour-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheEras()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">69$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.04.21</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theEras/marcusmumford.jpg" alt="marcus">
+                            <p>Marcus Mumford</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theEras/phoebebridgers.jpg" alt="phoebe">
+                            <p>Phoebe Bridgers</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fearless Play -->
+            <section class="desc-container" id="fearlessPlay">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/fearlessPlay/fearlessPlay-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInFearlessPlay()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">23.99$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.10.10</h2>
+                        <h2><span>From</span> : 17:05 - 20:15</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Main contributors</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/fearlessPlay/christahughes.jpg" alt="christa">
+                            <p>Christa Hughes /main heroine/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/fearlessPlay/darylwallis.jpg" alt="daryl">
+                            <p>Daryl Wallis /composer/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/fearlessPlay/miratodd.jpg" alt="mira">
+                            <p>Mira Todd /writer/</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Red Play -->
+            <section class="desc-container" id="theRedPlay">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theRedPlay/thered-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheRedPlay()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">19.99$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.11.13</h2>
+                        <h2><span>From</span> : 18:35 - 21:20</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Main contributors</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theRedPlay/john_logan.jpg" alt="christa">
+                            <p>John Logan /writer/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theRedPlay/donmar.jpg" alt="daryl">
+                            <p>Donmar Warehouse /theatre/</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Speak Now Play -->
+            <section class="desc-container" id="speakNowPlay">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/speakNowPlay/casey.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInSpeakNowPlay()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">13.99$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.11.03</h2>
+                        <h2><span>From</span> : 20:35 - 20:55</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Main contributors</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNowPlay/sethkramer.jpg" alt="christa">
+                            <p>Seth Kramer /writer/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNowPlay/casey.jpg" alt="daryl">
+                            <p>Casey /main character/</p>
                         </div>
                     </div>
                 </div>
