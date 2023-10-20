@@ -62,6 +62,7 @@
             }
 
             .container .box-container .box{
+                visibility: visible;
                 box-shadow: 0 5px 10px rgba(0,0,0,.2);
                 border-radius: 5px;
                 text-align: center;
@@ -123,22 +124,22 @@
             <h1 class="heading">TICKET BOOKING SERVICE</h1>
             <br><br>
             <div>
-                <a href="concerts.html" class="button">
+                <button class="button">
                 <img src="i/concert.png" width="25" height="25" alt="concert icon"> 
-                <b>CONCERTS<b></a>
-                <a href="plays.html" class="button">
+                <b>CONCERTS</button>
+                <button class="button">
                 <img src="i/theatre.png" width="25" height="25" alt="play icon">
-                <b>PLAYS</b></a>
-                <a href="CDList.html" class="button">
+                <b>PLAYS</b></button>
+                <button class="button">
                 <img src="i/CD.png" width="25" height="25" alt="cd">
-                <b>CD</b></a>
+                <b>CD</b></button>
                 
             </div>
             <div class="black"></div>
             <!-- content box starts -->
             <div class="box-container">
                 
-                <div class="box" onclick="slideInFearless()">
+                <div class="box concert" onclick="slideInFearless()">
                     <h3>FEARLESS</h3>
                     <img src="i/Taylor in grey forest.png" alt="Taylor in grey forest">
                     <p>
@@ -158,7 +159,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideInTheRed()">
+                <div class="box concert" onclick="slideInTheRed()" >
                     <h3>THE RED</h3>
                     <img src="i/taylor with mirror.png" alt="taylor with mirror">
                     <p>
@@ -178,7 +179,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideInSpeakNow()">
+                <div class="box album" onclick="slideInSpeakNow()" >
                     <h3>SPEAK NOW</h3>
                     <img src="i/birds.png" alt="taylor's photo 3">
                     <p>
@@ -199,7 +200,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideIn1989()">
+                <div class="box album" onclick="slideIn1989()" >
                     <h3>THE 1989</h3>
                     <img src="i/Taylor born in 1989.png" alt="1989 photo">
                     <p>
@@ -220,7 +221,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideInTheReputation()">
+                <div class="box album" onclick="slideInTheReputation()" >
                     <h3>THE REPUTATION</h3>
                     <img src="i/Taylor in black sweater.png" alt="taylor in black sweater">
                     <p>
@@ -242,7 +243,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideInTheEras()">
+                <div class="box concert" onclick="slideInTheEras()" >
                     <h3>THE ERAS</h3>
                     <img src="i/sky and Taylor.png" alt="sky and taylor">
                     <p>
@@ -262,7 +263,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideInFearlessPlay()">
+                <div class="box play" onclick="slideInFearlessPlay()" >
                     <h3>FEARLESS</h3>
                     <img src="i/plays1.png" alt="plays1">
                     <p>
@@ -282,7 +283,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>              
 
-                <div class="box" onclick="slideInTheRedPlay()">
+                <div class="box play" onclick="slideInTheRedPlay()" >
                     <h3>THE RED</h3>
                     <img src="i/plays2.png" alt="plays2">
                     <p>
@@ -302,7 +303,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box" onclick="slideInSpeakNowPlay()">
+                <div class="box play" onclick="slideInSpeakNowPlay()">
                     <h3>SPEAK NOW</h3>
                     <img src="i/plays3.png" alt="plays3">
                     <p>
