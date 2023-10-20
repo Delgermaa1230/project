@@ -8,7 +8,7 @@ let slideIncrement = 0;
 let slideDecrement = contentSlider.length - 1;
 
 
-
+// slide to right
 arrRight.addEventListener("click", () => {
     arrRight.disabled = true;
     offset = contentSlider[0].offsetWidth;
@@ -30,7 +30,7 @@ arrRight.addEventListener("click", () => {
     }, 500);
 });
 
-
+// slide to left 
 arrLeft.addEventListener('click', () => {
     arrLeft.disabled = true;
     offset = contentSlider[0].offsetWidth;
