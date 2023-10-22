@@ -54,38 +54,38 @@
                 
             }
 
-            .container .box-container{
-                display:grid;
+            .container .cart-list{
+                display:list-item;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 gap: 15px
             }
 
-            .container .box-container .box{
+            .container .cart-list .item{
                 box-shadow: 0 5px 10px rgba(0,0,0,.2);
                 border-radius: 5px;
                 text-align: center;
                 padding: 20px 20px;
-                background-image: url('i/aesthetic header 1.jpeg');
+                background-color: aliceblue;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
             }
 
-            .container .box-container .box img{
-                height: 150px;
+            .container .cart-list .item img{
+                height: 35px;
             }
 
-            .container .box-container .box p dl{
+            .container .cart-list .item p dl{
                 color: rgb(67, 67, 66);
                 font-size: 13px;
             }
-            .container .box-container h3{
+            .container .cart-list h3{
                 color: #454444;
                 font-size: 22px;
                 padding: 10px 0;
             }
 
-            .container .box-container .box .btn{
+            .container .cart-list .item .btn{
                 margin-top: 10px;
                 display: inline-block;
                 background-color: #555353;
@@ -95,11 +95,11 @@
                 padding: 8px 25px;
             }
 
-            .container .box-container .box .btn:hover{
+            .container .cart-list .item .btn:hover{
                 letter-spacing: 1px;
             }
 
-            .container .box-container .box:hover{
+            .container .cart-list .item:hover{
                 box-shadow: 0 10px 15px rgba(0,0,0,.3);
                 transform: scale(1.03);
             }
@@ -114,10 +114,56 @@
     <body>
 
         <div class="container"> 
+            <a href="main.html" class="button">
+                    <img src="i/home.png" width="25" height="25" alt="concert icon"> 
+                    <b>HOME<b></a>
             <h1 class="heading">YOUR SHOPPING CART</h1>
-            <div>
-                
+            
+            <div class="cart-list"> 
+                <div class="item album"> 
+                    <h3>THE 1989</h3>
+                        <img src="i/Taylor born in 1989.png" alt="1989 photo">
+                        <p>
+                            <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
+
+                                <dd>
+                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
+                                    2023.12.03
+                                </dd>
+
+                                <dd>
+                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
+                                    Miami,Fl
+                                </dd>
+
+                            </dl>
+                        </p>
+                    <a href="#" class="btn">захиалах</a>
+                </div>
+
+                <div class="item album">
+                    <h3>THE REPUTATION</h3>
+                        <img src="i/Taylor in black sweater.png" alt="taylor in black sweater">
+                        <p>
+                            <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
+
+                                <dd>
+                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
+                                    2024.04.21
+                                </dd>
+
+
+                                <dd>
+                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
+                                    Miami,Fl
+                                </dd>
+
+                            </dl>
+                        </p>
+                    <a href="#" class="btn">захиалах</a>
+                </div>
             </div>
         </div>
+        
 
     </body>
