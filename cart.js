@@ -17,6 +17,18 @@ function ready() {
         })
     }}
 
+function updateCartTotal() {
+    var cartPrice = document.getElementsByClassName('cart-price')
+    var quantityElement = document.getElementsByClassName('cart-quantity-input')
+    console.log(quantityElement)
+    for (var i = 0; i < cartPrice.length; i++) {
+        
+        var cartP = cartPrice[i]
+        var price = parseFloat(cartP.innerText.replace("$",""))
+        var quantity = quantityElement.value
+        console.log(price, quantity)
+    }
+}
 //     var quanityInput = document.getElementsByClassName('cart-quantity-input')
 //     for (var i = 0; i < quanityInput.length; i++) {
 //         var input = quanityInput[i]
