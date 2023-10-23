@@ -12,10 +12,10 @@ function ready() {
         var button = removeCartItemBtns[i]
         button.addEventListener('click', function (event) {
             var buttonClicked = event.target
-            buttonClicked.parentElement.remove()
+            buttonClicked.parentElement.parentElement.remove()
             updateCartTotal()
         })
-    }
+    }}
 
 //     var quanityInput = document.getElementsByClassName('cart-quantity-input')
 //     for (var i = 0; i < quanityInput.length; i++) {
@@ -50,4 +50,3 @@ function ready() {
 //     }
 //     // document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 // }
-
