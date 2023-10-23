@@ -4,6 +4,7 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+<<<<<<< HEAD
 // console.log("Testtt")
 
 function ready() {
@@ -62,3 +63,27 @@ function updateCartTotal() {
 //     }
 //     // document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 // }
+=======
+ function ready() {
+     var removeCartItemBtns = document.getElementsByClassName('btn-danger')
+     for (var i = 0; i < removeCartItemBtns.length; i++) {
+ @@ -32,18 +34,19 @@ function quanityChanged(event) {
+ }
+
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-item')
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
+        console.log(price)
+        console.log(total)
+    }
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+>>>>>>> 4507892 (to pull)
