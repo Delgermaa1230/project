@@ -4,7 +4,6 @@ if (document.readyState == 'loading') {
     ready()
 }
 
-<<<<<<< HEAD
 // console.log("Testtt")
 
 function ready() {
@@ -63,7 +62,6 @@ function updateCartTotal() {
 //     }
 //     // document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 // }
-=======
  function ready() {
      var removeCartItemBtns = document.getElementsByClassName('btn-danger')
      for (var i = 0; i < removeCartItemBtns.length; i++) {
@@ -86,4 +84,3 @@ function updateCartTotal() {
     }
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
->>>>>>> 4507892 (to pull)
