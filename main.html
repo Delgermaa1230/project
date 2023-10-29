@@ -4,8 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equip="X-UA-Compatible" content="EI-edge">
-        <meta name="vewport" content="width=device-width, initial-scale=1.0">
-        <title> Ticket booking service </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             *{
                 font-family: 'Poppins', sans-serif;
@@ -23,6 +22,7 @@
                 background: linear-gradient(45deg, rgb(255, 246, 212), rgb(238,227,220));
                 padding: 30px;
                 padding-bottom: 50px;
+                position: relative;
             }
 
             .container .heading{
@@ -38,6 +38,11 @@
                 background-attachment: fixed;
                 background-size: cover;
             }
+            .buttons-category{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
             .button{
                 color: rgb(91, 77, 47);
                 padding: 12px 16px;
@@ -52,16 +57,29 @@
                 font-size:  30px;
                 border-radius: 10px;
                 padding: 8px 25px;
-                
             }
 
+            .buttons-category .arrow {
+                cursor: pointer;
+            }
+            .buttons-category .arrow .right-arrow:hover, .left-arrow:hover {
+                color: rgb(52, 131, 131);
+            }
             .container .box-container{
                 display:grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 15px
+                grid-template-columns: repeat(10, minmax(300px, 1fr));
+                overflow: hidden;
+                gap: 15px;
+            }
+
+            .container .arrow {
+                width: 80px;
+                display: flex;
+                justify-content: space-between;
             }
 
             .container .box-container .box{
+                visibility: visible;
                 box-shadow: 0 5px 10px rgba(0,0,0,.2);
                 border-radius: 5px;
                 text-align: center;
@@ -70,6 +88,7 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
+                cursor: pointer;
             }
 
             .container .box-container .box img{
@@ -86,7 +105,7 @@
                 padding: 10px 0;
             }
 
-            .container .box-container .box .btn{
+            .btn{
                 margin-top: 10px;
                 display: inline-block;
                 background-color: #555353;
@@ -96,7 +115,7 @@
                 padding: 8px 25px;
             }
 
-            .container .box-container .box .btn:hover{
+            .btn:hover{
                 letter-spacing: 1px;
             }
 
@@ -110,28 +129,71 @@
             }
 
         </style>
+        <link rel="stylesheet" href="main.css">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="cart.js" async></script>
+        <script>
+            function concert() {
+                console.log("concert has been clicked")
+                var nonconcertelements = document.getElementsByClassName("box album","box play")
+                for (var i=1; i<concert.length; i++) {
+                    nonconcertelements.remove();
+                }
+            }
+            function plays() {
+                console.log("plays has been clicked")
+                this.document.getElementsByClassName("box concert", "box album").remove()
+            }
+            function cd() {
+                console.log("cd has been clicked")
+                this.document.getElementsByClassName("box concert", "box play").remove()
+            }
+        </script>
     </head>
 
     <body>
 
         <div class="container"> 
-
+                <a href="cart/cart_v1.html" class="button">
+                <img src="i/shopping cart.png" width="25" height="25" alt="concert icon"> 
+                <b>YOUR CART<b></a>
             <h1 class="heading">TICKET BOOKING SERVICE</h1>
             <br><br>
-            <div>
-                <a href="concerts.html" class="button">
-                <img src="i/concert.png" width="25" height="25" alt="concert icon"> 
-                <b>CONCERTS<b></a>
-                <a href="plays.html" class="button">
-                <img src="i/theatre.png" width="25" height="25" alt="play icon">
-                <b>PLAYS</b></a>
-                <a href="CDList.html" class="button">
-                <img src="i/CD.png" width="25" height="25" alt="cd">
-                <b>CD</b></a>
+
+            <!-- buttons and arrows -->
+            <div class="buttons-category">
+                <div class="category">
+                    <button class="button" id="1" onclick="concert()">
+                    <img src="i/concert.png" width="25" height="25" alt="concert icon"> 
+                    <b>CONCERTS</button>
+                    <button class="button" id="2" onclick="plays()">
+                    <img src="i/theatre.png" width="25" height="25" alt="play icon">
+                    <b>PLAYS</b></button>
+                    <button class="button" id="3" onclick="cd()">
+                    <img src="i/CD.png" width="25" height="25" alt="cd">
+                    <b>CD</b></button>
+                </div>
+                
+                <!-- arrows -->
+                <div class="arrow">
+                    <!-- left arrow -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="left-arrow" id="left-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" /></svg>
+                    <!-- right arrow -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="right-arrow" id="right-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+                </div>
+                
             </div>
+
+            <!-- baraan opacity buuruulagch -->
+            <div class="black"></div>
+
+            <!-- content box starts -->
             <div class="box-container">
                 
-                <div class="box">
+                <div class="box concert" onclick="slideInFearless()">
                     <h3>FEARLESS</h3>
                     <img src="i/Taylor in grey forest.png" alt="Taylor in grey forest">
                     <p>
@@ -148,12 +210,10 @@
                             </dd>
                         </dl>
                     </p>
-                    <a href="pages/fearless.html" class="btn">захиалах</a>
+                    <a href="#" class="btn">захиалах</a>
                 </div>
-            
-               
 
-                <div class="box">
+                <div class="box concert" onclick="slideInTheRed()" >
                     <h3>THE RED</h3>
                     <img src="i/taylor with mirror.png" alt="taylor with mirror">
                     <p>
@@ -170,10 +230,10 @@
 
                         </dl>
                     </p>
-                    <a href="pages/red.html" class="btn">захиалах</a>
+                    <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box album" onclick="slideInSpeakNow()" >
                     <h3>SPEAK NOW</h3>
                     <img src="i/birds.png" alt="taylor's photo 3">
                     <p>
@@ -191,10 +251,10 @@
                         
                         </dl>
                     </p>
-                    <a href="pages/speaknow.html" class="btn">захиалах</a>
+                    <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box album" onclick="slideIn1989()" >
                     <h3>THE 1989</h3>
                     <img src="i/Taylor born in 1989.png" alt="1989 photo">
                     <p>
@@ -212,10 +272,10 @@
 
                         </dl>
                     </p>
-                    <a href="pages/1989.html" class="btn">захиалах</a>
+                    <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box album" onclick="slideInTheReputation()" >
                     <h3>THE REPUTATION</h3>
                     <img src="i/Taylor in black sweater.png" alt="taylor in black sweater">
                     <p>
@@ -234,10 +294,10 @@
 
                         </dl>
                     </p>
-                    <a href="pages/thereputation.html" class="btn">захиалах</a>
+                    <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box concert" onclick="slideInTheEras()" >
                     <h3>THE ERAS</h3>
                     <img src="i/sky and Taylor.png" alt="sky and taylor">
                     <p>
@@ -254,9 +314,10 @@
 
                         </dl>
                     </p>
-                    <a href="pages/theeras.html" class="btn">захиалах</a>
+                    <a href="#" class="btn">захиалах</a>
                 </div>
-                <div class="box">
+
+                <div class="box play" onclick="slideInFearlessPlay()" >
                     <h3>FEARLESS</h3>
                     <img src="i/plays1.png" alt="plays1">
                     <p>
@@ -276,7 +337,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>              
 
-                <div class="box">
+                <div class="box play" onclick="slideInTheRedPlay()" >
                     <h3>THE RED</h3>
                     <img src="i/plays2.png" alt="plays2">
                     <p>
@@ -296,7 +357,7 @@
                     <a href="#" class="btn">захиалах</a>
                 </div>
 
-                <div class="box">
+                <div class="box play" onclick="slideInSpeakNowPlay()">
                     <h3>SPEAK NOW</h3>
                     <img src="i/plays3.png" alt="plays3">
                     <p>
@@ -316,71 +377,353 @@
                     </p>
                     <a href="#" class="btn">захиалах</a>
                 </div>
-            <!-- 
-                <div class="box">
-                    <h3>THE 1989</h3>
-                    <img src="i/plays4.png" alt="plays4">
-                    <p>
-                        <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
-
-                                <dd>
-                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
-                                    2023.12.03
-                                </dd>
-
-                                <dd>
-                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
-                                    Miami,Fl
-                                </dd>
-
-                        </dl>
-                    </p>
-                    <a href="1989.html" class="btn">захиалах</a>
-                </div>
-
-                <div class="box">
-                    <h3>THE REPUTATION</h3>
-                    <img src="i/plays5.png" alt="plays5">
-                    <p>
-                        <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
-
-                                <dd>
-                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
-                                    2024.04.21
-                                </dd>
-
-
-                                <dd>
-                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
-                                    Miami,Fl
-                                </dd>
-
-                        </dl>
-                    </p>
-                    <a href="thereputation.html" class="btn">захиалах</a>
-                </div>
-
-                <div class="box">
-                    <h3>THE ERAS</h3>
-                    <img src="i/plays6.png" alt="plays6">
-                    <p>
-                        <dl style="color:#555353; font-size: 13px; font-family: Poppins;">
-                                <dd>
-                                    <img src="i/date.png" alt="date icon" style="width: 13px; height: 13px;">
-                                    2023.06.02
-                                </dd>
-
-                                <dd>
-                                    <img src="i/lacation.png" alt="location icon" style="width: 10px; height: 13px;">
-                                    Miami,Fl
-                                </dd>
-
-                        </dl>
-                    </p>
-                    <a href="theeras.html" class="btn">захиалах</a>
-                </div>
-            -->
             </div>
+
+            <!-- description section starts -->
+            <section class="desc-container" id="fearless">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/fearless-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInFearless()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">39$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Date</span> : 2023.10.10</h2>
+                        <h2><span>From</span> : 18:00 - 23:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/fearless-justin.jpg" alt="justin">
+                            <p>Justin Bieber</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/fearless-kellie.jpg" alt="kellie">
+                            <p>Kellie Pickler</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/fearless-gloriana.jpg" alt="gloriana">
+                            <p>Gloriana Music Band</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Red -->
+            <section class="desc-container" id="theRed">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theRed/theRed-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheRed()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">129$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Date</span> : 2023.11.13</h2>
+                        <h2><span>From</span> : 19:00 - 24:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theRed/edsheeran.jpg" alt="sheeran">
+                            <p>Ed Sheeran</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theRed/falloutboy.jpg" alt="fallout">
+                            <p>Fall Out Boy</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theRed/jenniferlopez.jpg" alt="jennifer">
+                            <p>Jennifer Lopez</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Speak Now -->
+            <section class="desc-container" id="speakNow">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/speakNow/speakNow-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInSpeakNow()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">50$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2024.04.21</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNow/hayley-jpg.jpeg" alt="hayley">
+                            <p>Hayley Williams</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNow/falloutboy.jpg" alt="kellie">
+                            <p>Fall Out Boy</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 1989 -->
+            <section class="desc-container" id="1989">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/1989/1989bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideIn1989()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">67$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.12.03</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/1989/ryanadams.jpg" alt="hayley">
+                            <p>Ryan Adams</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/1989/shawnmendes.jpg" alt="kellie">
+                            <p>Shawn Mendes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Reputation -->
+            <section class="desc-container" id="theReputation">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theReputation/reputation-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheReputation()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">69$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.04.21</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theReputation/selenagomez.jpg" alt="selena">
+                            <p>Selena Gomez</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theReputation/shawnmendes.jpg" alt="kellie">
+                            <p>Shawn Mendes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Eras -->
+            <section class="desc-container" id="theEras">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theEras/ErasTour-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheEras()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">69$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.04.21</h2>
+                        <h2><span>From</span> : 00:00 - 00:00</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Guest Artists</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theEras/marcusmumford.jpg" alt="marcus">
+                            <p>Marcus Mumford</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theEras/phoebebridgers.jpg" alt="phoebe">
+                            <p>Phoebe Bridgers</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fearless Play -->
+            <section class="desc-container" id="fearlessPlay">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/fearlessPlay/fearlessPlay-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInFearlessPlay()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">23.99$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.10.10</h2>
+                        <h2><span>From</span> : 17:05 - 20:15</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Main contributors</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/fearlessPlay/christahughes.jpg" alt="christa">
+                            <p>Christa Hughes /main heroine/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/fearlessPlay/darylwallis.jpg" alt="daryl">
+                            <p>Daryl Wallis /composer/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/fearlessPlay/miratodd.jpg" alt="mira">
+                            <p>Mira Todd /writer/</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Red Play -->
+            <section class="desc-container" id="theRedPlay">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/theRedPlay/thered-bg.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInTheRedPlay()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">19.99$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.11.13</h2>
+                        <h2><span>From</span> : 18:35 - 21:20</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Main contributors</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/theRedPlay/john_logan.jpg" alt="christa">
+                            <p>John Logan /writer/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/theRedPlay/donmar.jpg" alt="daryl">
+                            <p>Donmar Warehouse /theatre/</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Speak Now Play -->
+            <section class="desc-container" id="speakNowPlay">
+                <div class="light"></div>
+                <div class="video">
+                    <img src="guest-img/speakNowPlay/casey.jpg" alt="">
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInSpeakNowPlay()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <div class="buttons-second">
+                            <a href="#" class="btn">захиалах</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="favorite" id="favorite">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>  
+                        </div>
+                        <h1 class="price">13.99$</h1> 
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="information">
+                    <div class="loc-date">
+                        <h2><span>Location</span> : Miami, Fl</h2>
+                        <h2><span>Release Date</span> : 2023.11.03</h2>
+                        <h2><span>From</span> : 20:35 - 20:55</h2>
+                    </div>
+                    <div class="guest-artist">
+                        <h1>Main contributors</h1>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNowPlay/sethkramer.jpg" alt="christa">
+                            <p>Seth Kramer /writer/</p>
+                        </div>
+                        <div class="guest-box">
+                            <img src="guest-img/speakNowPlay/casey.jpg" alt="daryl">
+                            <p>Casey /main character/</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="space"></div>
+            <section class="footer">
+                <div class="contact">
+                    <i class="fa-brands fa-instagram icon"></i>
+                    <i class="fa-brands fa-facebook icon"></i>
+                    <i class="fa-regular fa-phone icon"></i>
+                    <i class="fa-brands fa-twitter icon"></i>
+                    <i class="fa-solid fa-location-dot icon"></i>
+                </div>
+                <div class="outro">
+                    <p>Мөнхсайхан Нямбаяр</p>
+                    <h1>Online Ticket Booking</h1>
+                    <p>Дэлгэрмаа Эрдэмээ</p>
+                </div>
+            </section>
         </div>
+
+        <script src="main.js"></script>
+        <script src="slider.js"></script>
     </body>
 </html>
