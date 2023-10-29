@@ -1,0 +1,178 @@
+.desc-container {
+    width: 70%;
+    left: -100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    background: rgb(238,227,220);
+    object-fit: contain;
+    border: #454444 1px solid;
+    border-radius: 40px;
+    z-index: 20;
+}
+.desc-container .light {
+    background: linear-gradient(to bottom, rgba(255, 246, 212, .1) 60%, rgba(238,227,220, 1) 70%);
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+.container .black {
+    background: rgb(0, 0, 0);
+    opacity: 0.5;
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    transition: ease 1000ms;
+}
+.desc-container .video {
+    position: relative;
+    height: 500px;
+    padding: 10px 15px;
+}
+.desc-container .video img {
+    position: absolute;
+    border-radius: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 1;
+}
+.desc-container .video .buttons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.desc-container .video .buttons .exit {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 1000ms ease;
+}
+.desc-container .video .buttons .exit:hover {
+    background: rgba(255, 255, 255, .4);
+    transform: rotate(180deg);
+}
+.desc-container .video .buttons .buttons-second {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    display: flex;
+    gap: 20px;
+}
+.desc-container .video .buttons .buttons-second .favorite {
+    width: 40px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 1000ms ease;
+}
+.desc-container .video .buttons .buttons-second .favorite:hover {
+    background: rgba(255, 255, 255, .4);
+    transform: rotate(360deg);
+}
+.desc-container .video .buttons .price {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    color: white;
+    font-size: 50px;
+}
+.space {
+    width: 100%;
+    height: 100px;
+}
+.desc-container .information {
+    position: relative;
+    margin-top: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    z-index: 20;
+}
+.desc-container .information .loc-date {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.desc-container .information .loc-date span {
+    color: rgb(52, 131, 131);
+}
+.desc-container .information .guest-artist h1 {
+    color: rgb(52, 131, 131);
+    font-size: 50px;
+}
+.desc-container .information .guest-artist {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.desc-container .information .guest-artist .guest-box {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    border: 1px #454444 solid;
+    border-radius: 20px;
+}
+.desc-container .information .guest-artist .guest-box img {
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+}
+
+/* footer section */
+.footer {
+    width: 100%;
+    height: 25vh;
+    background-image: url(i/Aesthetic\ header\ 1.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.footer .contact {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    justify-content: center;
+    gap: 12rem;
+}
+.footer .contact .icon {
+    font-size: 25px;
+    color: rgb(51, 84, 123);;
+}
+.footer .outro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+.footer .outro p{
+    color: rgb(52, 131, 131);
+}
+.footer .outro h1 {
+    color: rgb(51, 84, 123);
+}
