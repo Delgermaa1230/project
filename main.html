@@ -57,6 +57,7 @@
                 font-size:  30px;
                 border-radius: 10px;
                 padding: 8px 25px;
+                
             }
 
             .buttons-category .arrow {
@@ -133,23 +134,6 @@
         <!-- font awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="cart.js" async></script>
-        <script>
-            function concert() {
-                console.log("concert has been clicked")
-                var nonconcertelements = document.getElementsByClassName("box album","box play")
-                for (var i=1; i<concert.length; i++) {
-                    nonconcertelements.remove();
-                }
-            }
-            function plays() {
-                console.log("plays has been clicked")
-                this.document.getElementsByClassName("box concert", "box album").remove()
-            }
-            function cd() {
-                console.log("cd has been clicked")
-                this.document.getElementsByClassName("box concert", "box play").remove()
-            }
-        </script>
     </head>
 
     <body>
@@ -164,13 +148,13 @@
             <!-- buttons and arrows -->
             <div class="buttons-category">
                 <div class="category">
-                    <button class="button" id="1" onclick="concert()">
+                    <button class="button">
                     <img src="i/concert.png" width="25" height="25" alt="concert icon"> 
                     <b>CONCERTS</button>
-                    <button class="button" id="2" onclick="plays()">
+                    <button class="button">
                     <img src="i/theatre.png" width="25" height="25" alt="play icon">
                     <b>PLAYS</b></button>
-                    <button class="button" id="3" onclick="cd()">
+                    <button class="button">
                     <img src="i/CD.png" width="25" height="25" alt="cd">
                     <b>CD</b></button>
                 </div>
