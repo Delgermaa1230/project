@@ -369,7 +369,7 @@
                             </dd>
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box concert" onclick="slideInTheRed()" >
@@ -389,7 +389,7 @@
 
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box album" onclick="slideInSpeakNow()" >
@@ -410,7 +410,7 @@
                         
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box album" onclick="slideIn1989()" >
@@ -431,7 +431,7 @@
 
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box album" onclick="slideInTheReputation()" >
@@ -453,7 +453,7 @@
 
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box concert" onclick="slideInTheEras()" >
@@ -473,7 +473,7 @@
 
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box play" onclick="slideInFearlessPlay()" >
@@ -493,7 +493,7 @@
                             </dd>
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>              
 
                 <div class="box play" onclick="slideInTheRedPlay()" >
@@ -513,7 +513,7 @@
 
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
 
                 <div class="box play" onclick="slideInSpeakNowPlay()">
@@ -534,15 +534,16 @@
 
                         </dl>
                     </p>
-                    <a href="#" class="btn">захиалах</a>
+                    <button href="#" class="btn" type="submit">захиалах</button>
                 </div>
+                
             </div>
 
             <!-- description section starts -->
             <section class="desc-container" id="fearless">
                 <div class="light"></div>
                 <div class="video">
-                    <img src="guest-img/fearless-bg.jpg" alt="">
+                    <img src="guest-img/fearless-bg.jpg" alt="" class="image">
                     <div class="buttons">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="exit" onclick="slideInFearless()"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                         <div class="buttons-second">
@@ -576,6 +577,18 @@
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    const image = document.querySelector('.image');
+                    const price = document.querySelector('.price');
+                    const container  = document.getElementById('fearless');
+
+                    container.addEventListener('submit', function() {
+                        const priceValue = price.value;
+                        
+                    });
+
+                </script>
             </section>
             <!-- The Red -->
             <section class="desc-container" id="theRed">
