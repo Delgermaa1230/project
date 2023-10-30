@@ -67,10 +67,3 @@ function slideInSpeakNowPlay() {
     speakNowPlay.style.left === "-100%" ? bgBlack.style.zIndex = "-10" : bgBlack.style.zIndex = "10";
 }
 
-favorite.addEventListener('click', function(e) {
-    if(favorite.style.background === 'none') {
-        favorite.style.background = 'red';
-    } else {
-        favorite.style.background = 'none';
-    }
-});
