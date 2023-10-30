@@ -7,7 +7,6 @@ var theEras = document.getElementById('theEras');
 var fearlessPlay = document.getElementById('fearlessPlay');
 var theRedPlay = document.getElementById('theRedPlay');
 var speakNowPlay = document.getElementById('speakNowPlay');
-
 var favorite = document.getElementById('favorite');
 var container = document.querySelector('.container');
 var bgBlack = document.querySelector('.black');
